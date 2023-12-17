@@ -37,10 +37,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            outline: 1px solid red;
         }
         .btns {
-            width: 18%;
+            width: 23%;
             height: 15%;
         }
         .reset {
@@ -82,13 +81,14 @@
 <script>
     var btn = document.querySelectorAll('.btns');
     var win = Math.floor(Math.random()*20)+1;
+    console.log(win)
 
     btn.forEach(function(e,i) {
     e.addEventListener("click", function() {
         if(e.value==win) {
-            alert("당첨")
+           e.setAttribute('style','background-color: green; color: white')
         }else{
-            alert("실패")
+            e.setAttribute('style','background-color: red; color: white')
         }
     })
 }
